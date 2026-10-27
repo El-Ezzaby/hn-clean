@@ -23,7 +23,7 @@ export default function StoryCard({ story, index }: StoryCardProps) {
       className="bg-zinc-900/60 hover:bg-zinc-900 p-4 rounded-xl border border-zinc-800/80 trnsition flex items-start gap-4 group"
     >
       {/* Ranking number */}
-      <span className="text-zinc-900/60 hover: bg-zinc-900 p-4 rounded-xl border border-zinc-800/80 transition flex items-start gap-4 group">
+      <span className="text-orange-500 hover: bg-zinc-900 p-4 rounded-xl border border-zinc-800/80 transition flex items-start gap-4 group">
         #{index + 1}
       </span>
 
