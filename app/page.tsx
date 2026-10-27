@@ -1,5 +1,6 @@
 'use client'
 
+import { timeAgo } from './lib/utils'
 import { useState, useEffect } from 'react'
 import { getTopStories, HNItem } from './lib/hnApi'
 
@@ -113,9 +114,7 @@ export default function HackerNewsRedesign() {
                     <span>
                       by <strong className="text-zinc-300">{story.by || 'nonymous'}</strong>
                     </span>
-                    <span >
-                      {story.time ? new Date(story.time * 1000).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) : ''}
-                    </span>
+                    <span>{story.time ? timeAgo(story.time) : ''}</span>
                     <span className="hover:text-zinc-200 transition">
                       💬 {story.descendants || 0} comments
                     </span>
